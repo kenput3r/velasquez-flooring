@@ -1,42 +1,121 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
+import logo from "../images/logo-new.png"
+import facebook from "../images/facebook.png"
+import yelp from "../images/yelp.png"
+import google from "../images/google.png"
+import mail from "../images/mail.png"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
+const Header = () => (
+  <Component>
+    <div className="row">
+      <nav role="navigation" aria-label="Main">
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/gallery">Gallery</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+        </ul>
+      </nav>
+      <h1>
+        <img src={logo} alt="Velasquez Flooring" />
       </h1>
+      <div>
+        <ul>
+          <li>
+            <a
+              href="mailto:velasquezflooring@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={mail} alt="email" />
+            </a>
+          </li>
+          <li>
+            <a href="https://facebook.com" target="_blank" rel="noreferrer">
+              <img src={facebook} alt="Facebook" />
+            </a>
+          </li>
+          <li>
+            <a href="https://yelp.com" target="_blank" rel="noreferrer">
+              <img src={yelp} alt="Yelp" />
+            </a>
+          </li>
+          <li>
+            <a href="https://google.com" target="_blank" rel="noreferrer">
+              <img src={google} alt="Google" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </header>
+  </Component>
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
 export default Header
+
+const Component = styled.header`
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 1.45rem;
+  }
+  .row nav,
+  .row h1,
+  .row div {
+    flex: 1;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 0;
+  }
+  li {
+    display: inline-block;
+    list-style-type: none;
+  }
+  h1 img {
+    display: block;
+    max-width: 100%;
+    max-height: 250px;
+    margin: 0 auto;
+  }
+  li a {
+    color: var(--color-blue);
+    font-family: var(--title-font-stack);
+    text-decoration: none;
+  }
+  li a img {
+    max-height: 25px;
+  }
+  @media (max-width: 991px) {
+    .row h1 {
+      flex: 0.5;
+    }
+  }
+  @media (max-width: 639px) {
+    .row {
+      flex-wrap: wrap-reverse;
+    }
+    .row nav,
+    .row h1,
+    .row div {
+      flex: none;
+      width: 100%;
+    }
+    h1 img {
+      margin-bottom: 1.45rem;
+    }
+  }
+`
