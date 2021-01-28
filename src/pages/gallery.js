@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { Dialog } from "@reach/dialog"
 import Layout from "../components/layout"
 import Tagline from "../components/tagline"
-import SEO from "../components/SEO"
+import SEO from "../components/seo"
 import "@reach/dialog/styles.css"
 
 const Gallery = ({ data }) => {
