@@ -5,6 +5,7 @@ import styled from "styled-components"
 import { Dialog } from "@reach/dialog"
 import Layout from "../components/layout"
 import Tagline from "../components/tagline"
+import SEO from "../components/SEO"
 import "@reach/dialog/styles.css"
 
 const Gallery = ({ data }) => {
@@ -12,7 +13,8 @@ const Gallery = ({ data }) => {
     data.allFile.edges[0].node.childImageSharp.fluid
   )
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const viewportWidth = typeof window === undefined ? 0 : window.innerWidth
+  const viewportWidth =
+    typeof window !== "undefined" && window ? window.innerWidth : 0
   const handleClick = (e, fluid) => {
     e.preventDefault()
     if (viewportWidth > 500) {
@@ -22,6 +24,7 @@ const Gallery = ({ data }) => {
   }
   return (
     <Layout>
+      <SEO title="Our Work" />
       <Page>
         <Tagline text="GALLERY" className="page-heading" />
         <div className="row">
