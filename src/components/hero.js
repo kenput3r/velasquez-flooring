@@ -41,7 +41,10 @@ const Hero = () => {
 export default Hero
 
 const Component = styled.div`
-  margin: 1.45rem 0;
+  margin: 3rem 0 1.45rem 0;
+  @media (max-width: 500px) {
+    margin-top: 1.45rem;
+  }
   .hero-image {
     display: flex;
     align-items: center;

@@ -38,12 +38,20 @@ const Header = () => (
             </a>
           </li>
           <li>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.facebook.com/velasquezflooring1"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={facebook} alt="Facebook" />
             </a>
           </li>
           <li>
-            <a href="https://yelp.com" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.yelp.com/biz/velasquez-flooring-la-habra-2"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={yelp} alt="Yelp" />
             </a>
           </li>
@@ -85,6 +93,9 @@ const Component = styled.header`
     display: inline-block;
     list-style-type: none;
   }
+  h1 {
+    margin-bottom: 0;
+  }
   h1 img {
     display: block;
     max-width: 100%;
@@ -95,6 +106,7 @@ const Component = styled.header`
     color: var(--color-blue);
     font-family: var(--title-font-stack);
     text-decoration: none;
+    padding: 5px;
   }
   li a img {
     max-height: 25px;

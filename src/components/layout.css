@@ -604,3 +604,21 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+[data-reach-dialog-content] {
+  padding-top: 5px !important;
+}
+
+[data-reach-dialog-content] button:focus {
+  outline: 0;
+}
+
+[data-reach-dialog-content] button:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  [data-reach-dialog-content] {
+    width: 80vw !important;
+  }
+}

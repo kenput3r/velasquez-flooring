@@ -12,7 +12,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Hero />
-    <Tagline />
+    <Tagline text="Flooring can make or break your home, so go with a leader in laminate, LVT, engineered and hardwood flooring." />
     <ImagesWithText />
     <FloorTypes />
     <Services />

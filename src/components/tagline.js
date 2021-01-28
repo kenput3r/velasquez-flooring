@@ -1,15 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 
-const Tagline = () => {
+const Tagline = ({ text, className }) => {
   return (
-    <Component>
+    <Component className={className}>
       <div>
         <p></p>
-        <h3>
-          Flooring can make or break your home, so go with a leader in laminate,
-          LVT, engineered and hardwood flooring.
-        </h3>
+        <h3>{text}</h3>
         <p></p>
       </div>
     </Component>

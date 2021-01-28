@@ -81,7 +81,7 @@ const Services = () => {
             <Img fluid={data.freeConsultation.childImageSharp.fluid} />
             <div className="text">
               <div className="lines"></div>
-              <h3>Residential Design</h3>
+              <h3>Free Consultation</h3>
               <p>
                 We provide on-premise free consultatio. We will meet with you to
                 discuss our products and services, show samples, and help you
