@@ -1,12 +1,19 @@
 import React from "react"
 import styled from "styled-components"
 
-const Tagline = ({ text, className }) => {
+const Tagline = ({ text, className, heading_type }) => {
+  const returnHeading = () => {
+    if (heading_type === "h2") {
+      return <h2>{text}</h2>
+    } else {
+      return <h3>{text}</h3>
+    }
+  }
   return (
     <Component className={className}>
       <div>
         <p></p>
-        <h3>{text}</h3>
+        {returnHeading()}
         <p></p>
       </div>
     </Component>
@@ -21,6 +28,7 @@ const Component = styled.div`
     max-width: 90vw;
     margin: 6rem auto;
   }
+  h2,
   h3 {
     border: 8px solid var(--color-blue);
     color: var(--color-grey-dark);
@@ -48,6 +56,7 @@ const Component = styled.div`
     z-index: 2;
   }
   @media (max-width: 1024px) {
+    h2,
     h3 {
       font-size: 2rem;
     }
@@ -57,11 +66,13 @@ const Component = styled.div`
       margin: 3rem auto;
       max-width: 95vw;
     }
+    h2,
     h3 {
       font-size: 1.5rem;
     }
   }
   @media (max-width: 320px) {
+    h2,
     h3 {
       font-size: 1.2rem;
     }

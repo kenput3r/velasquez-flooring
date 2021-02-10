@@ -4,13 +4,13 @@ import Layout from "../components/layout"
 import Tagline from "../components/tagline"
 import SEO from "../components/seo"
 
-const Contact = ({ data }) => {
+const Contact = () => {
   return (
     <Layout>
       <SEO title="Contact Velasquez Flooring" />
       <Page>
         <div className="wrapper">
-          <Tagline text="Contact" className="page-heading" />
+          <Tagline text="Contact" className="page-heading" heading_type="h2" />
           <div className="row">
             <div className="col">
               <h3>Send Us A Messgae</h3>
@@ -111,15 +111,9 @@ const Page = styled.div`
       margin: 3rem auto;
       width: 640px;
     }
+    h2,
     h3 {
       color: var(--color-blue);
-    }
-  }
-  h1 {
-    line-height: 0.5;
-    span {
-      font-size: 1rem;
-      padding-left: 5px;
     }
   }
   .row {

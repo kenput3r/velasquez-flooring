@@ -26,7 +26,7 @@ const Gallery = ({ data }) => {
     <Layout>
       <SEO title="Our Work" />
       <Page>
-        <Tagline text="GALLERY" className="page-heading" />
+        <Tagline text="GALLERY" className="page-heading" heading_type="h2" />
         <div className="row">
           {data.allFile.edges.map((edge, i) => (
             <a
@@ -79,6 +79,7 @@ const Page = styled.div`
       margin: 3rem auto;
       width: 640px;
     }
+    h2,
     h3 {
       color: var(--color-blue);
     }
