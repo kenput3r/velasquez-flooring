@@ -56,7 +56,11 @@ const Header = () => (
             </a>
           </li>
           <li>
-            <a href="https://google.com" target="_blank" rel="noreferrer">
+            <a
+              href="https://g.page/r/CahlAWfd8ZBMEAE"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={google} alt="Google" />
             </a>
           </li>

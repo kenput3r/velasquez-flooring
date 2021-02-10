@@ -190,6 +190,7 @@ const Component = styled.div`
       margin-left: -240px;
     }
     &:nth-of-type(even) {
+      filter: drop-shadow(-7px 7px 5px #000000);
       margin-right: -240px;
     }
     &.last {
@@ -262,6 +263,7 @@ const Component = styled.div`
         margin-right: 0;
       }
       &:nth-of-type(even) {
+        filter: drop-shadow(7px 7px 5px #000000);
         margin-right: 2rem;
         margin-left: 0;
       }
